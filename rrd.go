@@ -369,6 +369,14 @@ func (g *Grapher) Area(value, color string, options ...string) {
 	g.push(area, options)
 }
 
+func (g *Grapher) Stack(value, color string, options ...string) {
+	stack := "STACK:" + value
+	if color != "" {
+		stack += "#" + color
+	}
+	g.push(stack, options)
+}
+
 func (g *Grapher) Tick(vname, color string, options ...string) {
 	tick := "TICK:" + vname
 	if color != "" {
